@@ -3,10 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.background_primary};
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0 0 50px;
 `;
 
 export const Content = styled.div`

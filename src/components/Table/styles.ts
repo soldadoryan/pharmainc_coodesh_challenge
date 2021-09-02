@@ -66,6 +66,5 @@ export const Form = styled.form`
 `;
 
 export const CTable = styled.table`
-  padding: 10px;
   font-size: 14px;
 `;

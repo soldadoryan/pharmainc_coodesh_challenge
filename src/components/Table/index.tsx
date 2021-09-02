@@ -10,12 +10,14 @@ import Feedback from '../Feedback';
 import Texts from '../../contents/en/Customers';
 import Radio from '../Radio';
 import Modal from '../Modal';
+import changeUrl from '../../utils/changeUrl';
 
 interface Props {
-  idCustomer: string | null
+  idCustomer: string | null,
+  setIdCustomer: (value: string | null) => void
 }
 
-const Table: React.FC<Props> = ({ idCustomer }) => {
+const Table: React.FC<Props> = ({ idCustomer, setIdCustomer }) => {
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [loadingMoreCustomers, setLoadingMoreCustomers] = useState(false);
@@ -53,11 +55,22 @@ const Table: React.FC<Props> = ({ idCustomer }) => {
     setPage(page + 1);
   }
 
+  const handleOpenModal = (item: CustomerDTO) => {
+    changeUrl(`?id=${item.login.uuid}`)
+    setSelectedCustomer(item);
+  };
+
+  const handleCloseModal = () => {
+    changeUrl('')
+    setIdCustomer(null);
+    setSelectedCustomer({} as CustomerDTO);
+  }
+
   return (
     <>
       {!!selectedCustomer.name && <Modal
         customer={selectedCustomer}
-        handleCloseModal={() => setSelectedCustomer({} as CustomerDTO)}
+        handleCloseModal={handleCloseModal}
       />}
       <Container className="shadow-sm">
         <Form>
@@ -106,7 +119,7 @@ const Table: React.FC<Props> = ({ idCustomer }) => {
                         <td className="text-capitalize">{item.gender}</td>
                         <td>{format(new Date(item.dob.date), 'MM/dd/yyyy')}</td>
                         <td>
-                          <button onClick={() => setSelectedCustomer(item)} type="button" className="btn btn-dark btn-sm">
+                          <button onClick={() => handleOpenModal(item)} type="button" className="btn btn-dark btn-sm">
                             <VscAdd />
                             <span className="view-span">{Texts.label_view_user}</span>
                           </button>
