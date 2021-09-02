@@ -12,6 +12,7 @@ const Customers: React.FC = () => {
   useEffect(() => {
     if (queryParams.get('id') !== null)
       setId(queryParams.get('id'));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
