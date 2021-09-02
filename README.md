@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+![Codeesh Logo](https://coodesh.com/images/svg/logos/logo.svg)
+# Codeesh - Front-End Challenge 🏅 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desafio desenvolvido com o objetivo de avaliar minhaforma de estruturação e autonomia em decisões para construir 
+algo escalável utilizando um framework moderno Javascript.
 
-## Available Scripts
+## Pharma Inc.
+Projeto focado em facilitar a gestão e visualização da informação dos pacientes
+da empresa Pharma Inc. de maneira simples e objetiva em um Dashboard que permite
+a listagem, filtragem e detalhamento dos dados disponíveis.
+## Instalando e rodando o projeto
 
-In the project directory, you can run:
+**Certifique-se antes de rodar os comandos abaixo que a sua máquina possui uma versão do NodeJS >= 14.17.7**
 
-### `yarn start`
+`npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+`yarn` 
+ou 
+`yarn install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Após fazer a instalação das dependências da aplicação, execute um dos seguintes
+scripts para rodar o projeto:
 
-### `yarn build`
+`yarn start` ou `npm run start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Caso queira buildar o projeto para hospedá-lo, execute:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`yarn build` ou `npm run build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## APIs
 
-### `yarn eject`
+**randomuser.me** - API responsável pela geração de perfis randomicos utilizada para
+simular a listagem dos dados dos pacientes.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Linguagens e tecnologias utilizadas
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[ReactJS](https://pt-br.reactjs.org/) - Biblioteca Javascript Front-end;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Typescript](https://pt-br.reactjs.org/) - Sintaxe Javascript de tipagem;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Context API:** Para gerenciamento de contextos;
 
-## Learn More
+[Bootstrap](https://getbootstrap.com/) - Framework para construção de interfaces responsivas;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Desafio proposto pela [Coodesh](https://coodesh.com/)**
